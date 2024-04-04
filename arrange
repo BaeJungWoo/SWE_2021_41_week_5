@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for file in ./files/*.txt;
+do folder="$(echo "$file" | cut -c 9 | tr '[:upper:]' '[:lower:]')"
+mv "$file" "./$folder/"
+done
